@@ -7,7 +7,8 @@ This plugin adds a button on top of images in your website. The button appears o
 Author: Pixter Media
 Author URI: http://www.pixter-media.com
 Text Domain: pixter-me
-License: GPL2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Version: 1.2
 
 Copyright 2015 Pixter Media
