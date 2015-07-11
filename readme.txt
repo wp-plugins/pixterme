@@ -45,9 +45,7 @@ Don't hesitate to [give your feedback](http://wordpress.org/support/plugin/pixte
 == Screenshots ==
 1. Hovered image button
 2. Select your product
-3. Edit image
-4. Register
-5. Admin panel
+3. Admin panel
 
 == Frequently Asked Questions ==
 
