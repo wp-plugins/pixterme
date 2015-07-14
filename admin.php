@@ -41,7 +41,7 @@ $fields = array(
 		"type" => "text",
 		"name" => __("CSS Selector", 'pixter-me'),
 		"id" => "selector",
-		"desc" => __("Selector for containers including relevant images. Comma separates multiple selectors.", 'pixter-me'),
+		"desc" => __("CSS Selector for relevant images. Comma separates multiple selectors.", 'pixter-me'),
 		"default" => "img"
 		),
 	);
@@ -101,8 +101,7 @@ if (empty($pixter_me_user))
 #admin_page_class { display: none; }
 #register-pm
 {
-	padding: 20px;
-	width: calc(100% - 50px);
+	padding: 20px;	
 	position: relative;
 }
 #registration-form

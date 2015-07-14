@@ -72,7 +72,7 @@ function pixter_me_inline_script()
 function onInitComplete()
 {
 	pLoader.initOnDemand({
-		"selectors":"{$options->selector}", "minHeight":150, "minWidth":150, "position":"$button_position",
+		"selectors":"{$options->selector}", "minHeight":150, "minWidth":150, "tbMinHeight":100, "tbMinWidth":100, "position":"$button_position",
 		"text":"$button_text", "textColor":"$button_text_color", "buttonColor":"$button_bg_color"
 	});
 }
