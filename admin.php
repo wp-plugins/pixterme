@@ -13,14 +13,14 @@ $fields = array(
 		"name" => __("Button text", 'pixter-me'),
 		"id" => "button_text",
 		"desc" => __("The text which will appear on the button which is displayed while hovering an image", 'pixter-me'),
-		"default" => __("Print Image", 'pixter-me')
+		"default" => __("Get Prints >>", 'pixter-me')
 		),
 	array(
 		"type" => "color",
 		"name" => __("Button background color", 'pixter-me'),
 		"id" => "button_bg_color",
 		"desc" => __("Bacground color of the print button.", 'pixter-me'),
-		"default" => "#3333CC"
+		"default" => "#00B22D"
 		),
 	array(
 		"type" => "color",
@@ -42,11 +42,12 @@ $fields = array(
 		"name" => __("CSS Selector", 'pixter-me'),
 		"id" => "selector",
 		"desc" => __("Selector for containers including relevant images. Comma separates multiple selectors.", 'pixter-me'),
-		"default" => "#primary, .entry-content"
+		"default" => "img"
 		),
 	);
 
 $pixter_me_user = get_option('pixter_me_user');
+
 if (empty($pixter_me_user))
 {
 	add_action( 'wp_ajax_register_pixter', 'register_pixter' );

@@ -67,45 +67,12 @@ function pixter_me_inline_script()
 			case 'bottom-right':	$cssPos = "left: auto!important; right: 5px; top: auto!important; bottom: 5px;";	break;
 		}
 
-		$selector = explode(',', $options->selector);
-		foreach ($selector as &$sel)
-			$sel = trim($sel).' img';
-
-		$selector = implode(', ', $selector);
-
 		echo <<<InlineScript
-<style>
-	.pixter_wrapper
-	{
-		position: relative;
-		display: inline-block;
-	}
-	.pixter_button
-	{
-		$cssPos
-		padding: 7px 12px!important;
-		height: auto!important;
-		width: auto!important;
-		border-radius: 5px!important;
-		line-height: 1!important;
-		color: $button_text_color!important;
-		background-color: $button_bg_color!important;
-		display: none;
-	}
-	.pixter_button, .pixter_button:hover
-	{
-		text-decoration: none;
-	}
-	.pixter_wrapper:hover .pixter_button
-	{
-		display: inline-block;
-	}
-</style>
 <script>
 function onInitComplete()
 {
 	pLoader.initOnDemand({
-		"selectors":"$selector", "minHeight":150, "minWidth":150, "position":"$button_position",
+		"selectors":"{$options->selector}", "minHeight":150, "minWidth":150, "position":"$button_position",
 		"text":"$button_text", "textColor":"$button_text_color", "buttonColor":"$button_bg_color"
 	});
 }
@@ -116,5 +83,6 @@ InlineScript;
 		global $wp_scripts;
 		$wp_scripts->done[] = 'pixter_me_inline';
 	}
+
 }
 add_action( 'wp_footer', 'pixter_me_inline_script', 99999 );
