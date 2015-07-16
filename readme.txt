@@ -7,7 +7,7 @@ Author URI: https://www.pixter-media.com
 Tags: image, print, photographer, picture, store, shop
 Requires at least: 3.6
 Tested up to: 4.2.2
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,9 +72,11 @@ For you as the page owner, Pixter.me functionality is absolutely free of charge.
 
 == Changelog ==
 
+= 1.3 =
+* Move design to Pixter.me.
+
 = 1.2 =
 * First wordpress library release.
 
 = 1.0 =
 * Initial release.
-
