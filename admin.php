@@ -29,6 +29,7 @@ $fields = array(
 		"desc" => __("Text color of the print button.", 'pixter-me'),
 		"default" => "#FFFFEE"
 		),
+		/*
 	array(
 		"type" => "radio",
 		"name" => __("Button position", 'pixter-me'),
@@ -37,11 +38,12 @@ $fields = array(
 		"desc" => __("The position of the button relatively to the image.", 'pixter-me'),
 		"default" => "top-left"
 		),
+		*/
 	array(
 		"type" => "text",
 		"name" => __("CSS Selector", 'pixter-me'),
 		"id" => "selector",
-		"desc" => __("CSS Selector for relevant images. Comma separates multiple selectors.", 'pixter-me'),
+		"desc" => __("Selector for containers including relevant images. Comma separates multiple selectors.", 'pixter-me'),
 		"default" => "img"
 		),
 	);
@@ -101,7 +103,8 @@ if (empty($pixter_me_user))
 #admin_page_class { display: none; }
 #register-pm
 {
-	padding: 20px;	
+	padding: 20px;
+	width: calc(100% - 50px);
 	position: relative;
 }
 #registration-form

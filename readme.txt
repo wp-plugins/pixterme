@@ -59,7 +59,7 @@ Pixter.me takes care of the entire fulfilment process, from production to shippi
 You can manage your account settings and see your revenues at [our website](https://publishers.pixter-media.com)
 
 = What is the business model? =
-You get 20% of what is the paid by users. We want to make the model simple for you and easy to track. Therefore, the cut you get is from the entire payment – for both the product and the shipping.
+You get 20% of what is the paid by users. We want to make the model simple for you and easy to track. Therefore, the cut you get is from the entire payment - for both the product and the shipping.
 
 = What else do I have to do? =
 Nothing. Pixter-media is a complete end-to-end service that includes shopping experience, payment processing, delivery logistics and customer services.

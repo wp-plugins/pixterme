@@ -9,7 +9,7 @@ Author URI: http://www.pixter-media.com
 Text Domain: pixter-me
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.3
+Version: 1.2
 
 Copyright 2015 Pixter Media
 */
@@ -51,13 +51,14 @@ add_action( 'init', 'pixter_me_init');
 
 function pixter_me_inline_script()
 {
-	$apiKey = get_option('pixter_me_user');
+	$apiKey = get_option('pixter_me_user');	
 	if (!empty($apiKey) && !wp_script_is( 'pixter_me_inline', 'done' ) )
 	{
 		$options = (object)get_option('pixter_me_options');
 		$button_text = $options->button_text;
 		$button_bg_color = $options->button_bg_color;
 		$button_text_color = $options->button_text_color;
+		/*
 		$button_position = $options->button_position;
 		switch ($button_position)
 		{
@@ -65,16 +66,20 @@ function pixter_me_inline_script()
 			case 'top-right':		$cssPos = "left: auto!important; right: 5px; top: 5px;";	break;
 			case 'bottom-left':		$cssPos = "left: 5px; top: auto!important; bottom: 5px;";	break;
 			case 'bottom-right':	$cssPos = "left: auto!important; right: 5px; top: auto!important; bottom: 5px;";	break;
-		}
+		}		
+		
+		*/
+		$selector = $options->selector;
 
 		echo <<<InlineScript
+
 <script>
 function onInitComplete()
 {
 	pLoader.initOnDemand({
-		"selectors":"{$options->selector}", "minHeight":150, "minWidth":150, "tbMinHeight":100, "tbMinWidth":100, "position":"$button_position",
+		"selectors":"$selector", "minHeight":150, "minWidth":150, "position":"top-left",
 		"text":"$button_text", "textColor":"$button_text_color", "buttonColor":"$button_bg_color"
-	});
+	});	
 }
 </script>
 <script src="https://pixter-loader-assets.s3.amazonaws.com/Loader/loader.js"
@@ -82,7 +87,7 @@ function onInitComplete()
 InlineScript;
 		global $wp_scripts;
 		$wp_scripts->done[] = 'pixter_me_inline';
-	}
-
+	}	
+	
 }
 add_action( 'wp_footer', 'pixter_me_inline_script', 99999 );
